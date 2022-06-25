@@ -394,10 +394,10 @@
 			exec "xstopparty"\
 			exec "systemlink 0"; \
 			exec "splitscreen 0"; \
-			exec "xblive_rankedmatch 0"; \
+			exec "xblive_rankedmatch 1"; \
 			exec "onlinegame 0"; \
 			exec "arcademode 0" \
-			exec "zombiemode 0" \
+			exec "zombiemode 1" \
 			exec "ui_hostOptionsEnabled 0" \
 			SET_DEFAULT_MAP_AND_MODE \
 			open levels_unlock; \
@@ -456,6 +456,7 @@
 			//CHOICE_BUTTON_FOCUS_VIS_NOHI_EX( 1, "@MENU_RESUMEGAME", open resume_popmenu; LOCAL_ZOMBIE_RESET, ;, ;, when( !localvarBool( ui_hideBack ) );, name resume )*/
 			CHOICE_BUTTON_VIS( 1, "@MENU_SOLO_CAP", SETUP_ACTION_SOLO; LOCAL_ZOMBIE_RESET, when( !localvarBool( ui_hideBack ) ); )
 			CHOICE_BUTTON_VIS( 2, "@MENU_COOPERATIVE", open main_online; LOCAL_ZOMBIE_RESET, when( !localvarBool( ui_hideBack ) ); )
+			CHOICE_BUTTON_VIS( 3, "@MENU_RANK_AND_CHALLENGES_CAP", open menu_challenges; LOCAL_ZOMBIE_RESET, when( !localvarBool( ui_hideBack ) ); )
 			//CHOICE_BUTTON_VIS( 3, "@MENU_MULTIPLAYER", open multi_popmenu, when( !localvarBool( ui_hideBack ) ); )
 			CHOICE_SEPARATOR_VIS( CHOICE_SEP_1, when( !localvarBool( ui_hideBack ) ); )
 			//CHOICE_BUTTON_VIS( 3, "Join LAN Game", open menu_lan; LOCAL_ZOMBIE_RESET, when( !localvarBool( ui_hideBack ) ); )

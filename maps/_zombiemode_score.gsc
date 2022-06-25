@@ -37,7 +37,7 @@ player_add_points( event, mod, hit_location ,is_dog)
 			//stats tracking
 			self.stats["kills"] = self.kill_tracker;
 			
-			statAdd("kills", 1);
+			//statAdd("kills", 1);
 
 			if( mod == "MOD_MELEE" && self hasperk( "specialty_altmelee" ) )
 			{	
@@ -48,6 +48,10 @@ player_add_points( event, mod, hit_location ,is_dog)
 			{
 				points = points * 2;
 			}
+
+			statsKill = self getStat(2303);
+			statsKill = statsKill + 1;
+			self setStat(2303, statsKill);
 
 			break; 
 	
@@ -71,9 +75,13 @@ player_add_points( event, mod, hit_location ,is_dog)
 	self.score_total += points;
 	//stat tracking
 	self.stats["score"] = self.score_total;
+
+	statsScore = self getStat(2302);
+	statsScore = statsScore + points;
+	self setStat(2302, statsScore);
 	
 	//iPrintLn(points);
-	statAdd("score", points);
+	//statAdd("score", points);
 	maps\_challenges_coop::giveRankXP( "kills", points );
 
 	self set_player_score_hud(); 

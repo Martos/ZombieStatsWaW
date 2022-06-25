@@ -1224,6 +1224,12 @@ round_think()
 		
 		level.round_number++; 
 
+		for( i = 0; i < players.size; i++ ) {
+			statsRounds = players[i] getStat(2311);
+			statsRounds = statsRounds + 1;
+			players[i] setStat(2311, statsRounds);
+		}
+
 		level notify( "between_round_over" );
 	}
 }

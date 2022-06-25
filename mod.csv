@@ -1,4 +1,5 @@
-menufile,ui/main.menu
+stringtable,mp/rankTable.csv
+menufile,ui/menus.txt
 xmodel,viewmodel_zombie_colt45_pistol
 xmodel,weapon_zombie_colt45_pistol
 xmodel,viewmodel_zombie_ptrs41
