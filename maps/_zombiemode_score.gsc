@@ -79,8 +79,11 @@ player_add_points( event, mod, hit_location ,is_dog)
 	statsScore = self getStat(2302);
 	statsScore = statsScore + points;
 	self setStat(2302, statsScore);
+
+	/*statsPerks = self getStat(2310) + self.stats["perks"];
+	self setStat(2310, statsPerks);*/
 	
-	//iPrintLn(points);
+	//iPrintLn(self.stats["perks"]);
 	//statAdd("score", points);
 	maps\_challenges_coop::giveRankXP( "kills", points );
 

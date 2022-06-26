@@ -1,4 +1,5 @@
 stringtable,mp/rankTable.csv
+stringtable,mp/rankicontable.csv
 menufile,ui/menus.txt
 xmodel,viewmodel_zombie_colt45_pistol
 xmodel,weapon_zombie_colt45_pistol
@@ -6,3 +7,7 @@ xmodel,viewmodel_zombie_ptrs41
 xmodel,weapon_zombie_ptrs41
 xmodel,viewmodel_zombie_flamethrower
 xmodel,weapon_zombie_flamethrower
+material,zom_rank_1
+material,zom_rank_2
+image,a1wkDga
+image,vhkwsvp

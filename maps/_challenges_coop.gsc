@@ -692,8 +692,10 @@ giveRankXP( type, value, levelEnd )
 		case "challenge":
 			self.summary_challenge += value;
 			self.summary_xp += value;
+			break;
 		case "kill":
 			self.summary_xp += value;
+			break;
 	}
 		
 	//iPrintLn("GIVERANKXP: " + value);

@@ -1,3 +1,6 @@
+#define XP_FILLING_BAR_COLOR 1 0.9 0.5 0.6
+//#define XP_FILLING_BAR_COLOR 1 0 0 0.6
+
 #define PLAYERSTATS_WIDTH 		270
 
 #ifdef PC
@@ -183,7 +186,7 @@ itemDef { \
 	/* xp background bar*/
 	PREPROC_SHADER_DRAW_ALIGNED_VIS( LEVEL_NAME_X (SECOND_SEC_Y+Y_OFFSET*3) (PLAYERSTATS_WIDTH+8-24) 14 LOADOUT_ALIGN, ORIGIN_PLAYERSTATS, "white", 0.2 0.2 0.2 0.8, 0, 1, 1 1 1 0, when( CAN_RANK_UP ) )
 	/* xp filling bar*/
-	PREPROC_SHADER_DRAW_ALIGNED_VIS( LEVEL_NAME_X (SECOND_SEC_Y+Y_OFFSET*3) 0 14 LOADOUT_ALIGN, ORIGIN_PLAYERSTATS,"white", 1 0.9 0.5 0.6/*COLOR_FOCUSED*/, 0, 1, 1 1 1 0.2 exp rect W((-(PLAYERSTATS_WIDTH+8-24)*((int(tableLookup( "mp/rankTable.csv", 0, stat(252), 2 )) - stat(2301)) / int(tableLookup( "mp/rankTable.csv", 0, stat(252), 3 ))))), when( CAN_RANK_UP ) )
+	PREPROC_SHADER_DRAW_ALIGNED_VIS( LEVEL_NAME_X (SECOND_SEC_Y+Y_OFFSET*3) 0 14 LOADOUT_ALIGN, ORIGIN_PLAYERSTATS,"white", XP_FILLING_BAR_COLOR, 0, 1, 1 1 1 0.2 exp rect W((-(PLAYERSTATS_WIDTH+8-24)*((int(tableLookup( "mp/rankTable.csv", 0, stat(252), 2 )) - stat(2301)) / int(tableLookup( "mp/rankTable.csv", 0, stat(252), 3 ))))), when( CAN_RANK_UP ) )
 	
 #define THIRD_SEC_Y		(164+79) 
 	//second horizontal
