@@ -9,5 +9,17 @@ xmodel,viewmodel_zombie_flamethrower
 xmodel,weapon_zombie_flamethrower
 material,zom_rank_1
 material,zom_rank_2
+material,zom_rank_3
+material,zom_rank_4
+material,zom_rank_5
+material,zom_rank_6
+material,zom_rank_7
+material,zom_rank_8
 image,a1wkDga
 image,vhkwsvp
+image,zom_rank_3
+image,zom_rank_4
+image,zom_rank_5
+image,zom_rank_6
+image,zom_rank_7
+image,zom_rank_8
