@@ -534,7 +534,7 @@ init_levelvars()
 	set_zombie_var( "zombie_ai_per_player", 			6 );
 
 	// Scoring
-	set_zombie_var( "zombie_score_start", 				999999 );
+	set_zombie_var( "zombie_score_start", 				500 );
 /#
 	if( GetDvarInt( "zombie_cheat" ) >= 1 )
 	{
